@@ -158,8 +158,6 @@ export default function SignUp() {
     }
 
     try {
-      console.log("email");
-      console.log(email);
       const response = await fetch(`${apiUrl}/user/`, {
         method: 'POST',
         headers: {
@@ -171,9 +169,9 @@ export default function SignUp() {
           firstName,
           lastName,
           telephone,
-          ville,
-          postalCode,
-          adresse,
+          ville: ville || null,
+          postalCode: postalCode || null,
+          adresse: adresse || null,
           aspiringManager,
         })
       })
@@ -401,7 +399,7 @@ export default function SignUp() {
                   <Checkbox
                     checked={aspiringManager}
                     onChange={(e) => setAspiringManager(e.target.checked)}
-                    sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }} // Augmente la taille de l'icône de la checkbox
+                    sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
                   />
                   <Typography variant="subtitle2" sx={{ ml: 1 }}>
                     Demander à être gestionnaire
@@ -411,7 +409,6 @@ export default function SignUp() {
 
             </Grid>
 
-            {/* L'espace entre les champs et le bouton peut être ajusté ici avec mt pour margin-top */}
             <Button
               type="submit"
               fullWidth
