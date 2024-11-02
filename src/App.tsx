@@ -6,6 +6,7 @@ import UserList from "./screens/listUser";
 import AdminList from "./screens/listAdmin";
 import ManagerRequestList from "./screens/managerRequestList";
 import './App.css';
+import SaleSessionList from "./screens/saleSessionList";
 
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/login" element={<SignIn />} />
-        <Route path="/listeUtilisateur" element={<UserList />} />
+        <Route path="/listeUtilisateurs" element={<UserList />} />
         <Route path="/listeGestionnairesAdmins" element={<AdminList />} />
         <Route path="/listeDemandesGestionnaires" element={<ManagerRequestList />} />
+        <Route path="/listeSessionsVente" element={<SaleSessionList />} />
         {/*<Route path="/home" element={<Home />} />*/}
         {/* Ajoutez d'autres routes si nécessaire */}
       </Routes>
