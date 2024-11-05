@@ -7,6 +7,7 @@ import AdminList from "./screens/listAdmin";
 import ManagerRequestList from "./screens/managerRequestList";
 import './App.css';
 import SaleSessionList from "./screens/saleSessionList";
+import GameDeposit from "./screens/gameDeposit";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/listeGestionnairesAdmins" element={<AdminList />} />
         <Route path="/listeDemandesGestionnaires" element={<ManagerRequestList />} />
         <Route path="/listeSessionsVente" element={<SaleSessionList />} />
+        <Route path="/depotVente" element={< GameDeposit/>} />
         {/*<Route path="/home" element={<Home />} />*/}
         {/* Ajoutez d'autres routes si nécessaire */}
       </Routes>
