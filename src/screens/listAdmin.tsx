@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button, createTheme, ThemeProvider } from '@mui/material';
 import TripleSwitch from "../component/tripleswitch";
 import TabBar from "../component/tapBar";
+import Navbar from "../component/navbar";
 
 interface User {
     idUser: number;
@@ -98,6 +99,7 @@ export default function AdminList() {
 
     return (
         <ThemeProvider theme={theme}>
+            <Navbar />
             <div style={{
                 backgroundImage: 'url("/BlueWall (1).jpeg")',
                 backgroundSize: 'cover',

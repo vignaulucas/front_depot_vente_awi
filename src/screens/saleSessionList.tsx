@@ -5,6 +5,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
 import InfoIcon from '@mui/icons-material/Info';
+import Navbar from '../component/navbar';
 
 interface SaleSessionType {
     id: number;
@@ -158,6 +159,8 @@ const SaleSessionList: React.FC = () => {
 
     return (
         <ThemeProvider theme={theme}>
+            <Navbar />
+
             <div style={{
                 backgroundImage: 'url("/BlueWall (1).jpeg")',
                 backgroundSize: 'cover',

@@ -4,6 +4,7 @@ import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, B
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import TabBar from "../component/tapBar";
+import Navbar from "../component/navbar";
 
 interface User {
     idUser: number;
@@ -115,6 +116,8 @@ export default function ManagerRequestList() {
 
     return (
         <ThemeProvider theme={theme}>
+            <Navbar />
+
             <div style={{
                 backgroundImage: 'url("/BlueWall (1).jpeg")',
                 backgroundSize: 'cover',

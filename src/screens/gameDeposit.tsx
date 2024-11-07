@@ -3,7 +3,7 @@ import { Button, TextField, Dialog, DialogTitle, DialogContent, DialogActions, T
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import DeleteIcon from '@mui/icons-material/Close';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
-
+import Navbar from '../component/navbar';
 
 const theme = createTheme({
     palette: {
@@ -413,6 +413,8 @@ const GameDeposit: React.FC = () => {
 
     return (
         <ThemeProvider theme={theme}>
+            <Navbar />
+
             <div style={{
                 backgroundImage: 'url("/BlueWall (1).jpeg")',
                 backgroundSize: 'cover',
