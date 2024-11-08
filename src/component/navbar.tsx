@@ -55,6 +55,7 @@ function Navbar() {
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeUtilisateur">Liste utilisateur</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/depotVente">Dépôt Vente</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeSessionsVente">Session Vente</Button>}
+                    {isAdmin  && <Button color="inherit" href="/uploadCsv">Déposer CSV</Button>}
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end', flexGrow: 0 }}>
                     <Logout />
