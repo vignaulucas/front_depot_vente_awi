@@ -48,12 +48,14 @@ function Navbar() {
     return (
         <AppBar position="static" style={{ backgroundColor: isAdmin ? '#001A33' : '#001A33', width: '100%' }}>
             <Toolbar style={{ justifyContent: 'space-between' }}>
-                <Button color="inherit" href="/">
+                <Button color="inherit" href="/home">
                     <img src="/logoAWI.png" alt="Logo" style={{ height: 55 }} />
                 </Button>
                 <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
+                    <Button color="inherit" href="/home">Acceuil</Button>
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeUtilisateur">Liste utilisateur</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/depotVente">Dépôt Vente</Button>}
+                    {(isAdmin || isManager) && <Button color="inherit" href="/listeJeuxDepot">Liste jeux déposés</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeSessionsVente">Session Vente</Button>}
                     {isAdmin  && <Button color="inherit" href="/uploadCsv">Déposer CSV</Button>}
                 </Box>
@@ -64,5 +66,4 @@ function Navbar() {
         </AppBar>
     );
 }
-
 export default Navbar;
