@@ -243,7 +243,7 @@ function SignIn(props: SignInProps) {
               </Dialog>
             </Stack>
             <Stack direction="row" justifyContent="center" mt={1}>
-              <Link href="/" variant="body2">
+              <Link href="/register" variant="body2">
                 {"Pas encore de compte ? Inscris-toi !"}
               </Link>
             </Stack>
