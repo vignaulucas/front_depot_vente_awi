@@ -181,7 +181,7 @@ export default function SignUp() {
       }
       localStorage.setItem('token', data.accessToken);
       localStorage.setItem('role', data.role);
-      navigate("/");
+      navigate("/home");
       setLogin(true);
       setError('');
     } catch (error: any) {
