@@ -41,18 +41,14 @@ function Navbar() {
         }
     };
 
-    if (!userDetails) {
-        return <Spinner />;
-    }
-
     return (
         <AppBar position="static" style={{ backgroundColor: isAdmin ? '#001A33' : '#001A33', width: '100%' }}>
             <Toolbar style={{ justifyContent: 'space-between' }}>
-                <Button color="inherit" href="/home">
+                <Button color="inherit" href="/">
                     <img src="/logoAWI.png" alt="Logo" style={{ height: 55 }} />
                 </Button>
                 <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
-                    {(!isAdmin) && <Button color="inherit" href="/home">Acceuil</Button>}
+                    {(!isAdmin) && <Button color="inherit" href="/">Acceuil</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeUtilisateur">Liste utilisateur</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/depotVente">Dépôt Vente</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/purchase">Achat Jeux</Button>}
