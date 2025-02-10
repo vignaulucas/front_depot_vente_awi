@@ -64,10 +64,6 @@ export default function UserList() {
             .catch(console.error);
     };
 
-    const handleViewClient = (userId: number) => {
-        navigate(`/user/bilan/${userId}`);
-    };
-
     const theme = createTheme({
         palette: {
             primary: {
@@ -130,7 +126,6 @@ export default function UserList() {
                     <table className="user-table">
                         <thead>
                             <tr>
-                                <th>Bilan</th>
                                 <th>Nom</th>
                                 <th>Prénom</th>
                                 <th>Email</th>
@@ -144,15 +139,6 @@ export default function UserList() {
                         <tbody>
                             {filteredUsers.map(user => (
                                 <tr key={user.idUser}>
-                                    <td>
-                                        <Button
-                                            variant="outlined"
-                                            color="primary"
-                                            onClick={() => handleViewClient(user.idUser)}
-                                        >
-                                            Bilan
-                                        </Button>
-                                    </td>
                                     <td>{user.lastName}</td>
                                     <td>{user.firstName}</td>
                                     <td>{user.email}</td>

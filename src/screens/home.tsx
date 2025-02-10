@@ -86,10 +86,8 @@ export default function Home() {
                     },
                 });
                 const gamesData = await gamesResponse.json();
-                console.log(gamesData)
                 setGames(gamesData);
-                console.log("games")
-                console.log(games)
+
             } catch (error) {
                 setIsSessionActive(false);
                 console.error('Erreur lors de la récupération des jeux en vente:', error);
