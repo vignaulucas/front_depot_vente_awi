@@ -25,9 +25,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Register />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<SignIn />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/listeUtilisateur" element={<UserList />} />
         <Route path="/listeGestionnairesAdmins" element={<AdminList />} />
         <Route path="/listeDemandesGestionnaires" element={<ManagerRequestList />} />
