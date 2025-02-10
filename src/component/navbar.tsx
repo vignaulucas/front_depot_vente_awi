@@ -58,6 +58,7 @@ function Navbar() {
                     {(isAdmin || isManager) && <Button color="inherit" href="/purchase">Achat Jeux</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeJeuxDepot">Liste jeux déposés</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeSessionsVente">Session Vente</Button>}
+                    {isAdmin  && <Button color="inherit" href="/globalFinancialSummary">Bilan Global</Button>}
                     {isAdmin  && <Button color="inherit" href="/uploadCsv">Déposer CSV</Button>}
                 </Box>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end', flexGrow: 0 }}>

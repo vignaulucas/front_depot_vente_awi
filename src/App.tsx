@@ -13,6 +13,7 @@ import GameList from "./screens/gameList";
 import HomePage from "./screens/home";
 import Wishlist from "./screens/wishlist";
 import GamePurchase from "./screens/buyGame";
+import GlobalFinancialSummary from "./screens/globalFinancialSummary";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/listeJeuxDepot" element={<GameList />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/purchase" element={<GamePurchase />} />
+        <Route path="/globalFinancialSummary" element={<GlobalFinancialSummary />} />
         {/*<Route path="/home" element={<Home />} />*/}
         {/* Ajoutez d'autres routes si nécessaire */}
       </Routes>

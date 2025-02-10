@@ -301,6 +301,27 @@ const GameDeposit: React.FC = () => {
 
         for (const game of games) {
             const quantity = parseInt(game.quantity, 10) || 1;
+            let baseDepositFeePerGame: number;
+            if (activeSession.depositFeeType === 'percentage') {
+                baseDepositFeePerGame = (parseFloat(game.price) * parseFloat(activeSession.depositFee)) / 100;
+            } else {
+                baseDepositFeePerGame = parseFloat(activeSession.depositFee);
+            }
+
+            // Calcul du frais de dépôt total pour l'ensemble des exemplaires sans réduction
+            const baseTotalDepositFee = baseDepositFeePerGame * quantity;
+
+            let finalDepositFeePerGame = baseDepositFeePerGame;
+
+            // Si une réduction est appliquée, on ajuste le frais effectif par jeu
+            if (discountAmount) {
+                if (discountType === 'fixed') {
+                    const effectiveTotalDepositFee = baseTotalDepositFee - Number(discountAmount);
+                    finalDepositFeePerGame = effectiveTotalDepositFee / quantity;
+                } else if (discountType === 'percentage') {
+                    finalDepositFeePerGame = baseDepositFeePerGame * ((100 - Number(discountAmount)) / 100);
+                }
+            }
 
             for (let i = 0; i < quantity; i++) {
                 const response = await fetch(`${apiUrl}/depot/games`, {
@@ -318,6 +339,7 @@ const GameDeposit: React.FC = () => {
                         sellerId: !selectedUser ? sellerId : null,
                         userId: selectedUser ? sellerId : null,
                         saleSessionId: activeSession.id,
+                        depositFee: finalDepositFeePerGame,
                     })
                 });
 
