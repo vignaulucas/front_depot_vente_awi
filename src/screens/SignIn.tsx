@@ -79,7 +79,7 @@ function SignIn(props: SignInProps) {
       const data = await response.json();
       if (response.ok) {
         localStorage.setItem('token', data.accessToken);
-        navigate('/home');
+        navigate('/');
       } else {
         setPasswordError('Identifiant ou Mot de passe invalide');
         setIdentifierError('.');
