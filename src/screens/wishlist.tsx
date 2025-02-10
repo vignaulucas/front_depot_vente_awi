@@ -43,6 +43,8 @@ function parseJwt(token: string | null) {
     }
 }
 
+
+
 export default function Wishlist() {
     const [wishlistGames, setWishlistGames] = useState<Game[]>([]);
     const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -107,6 +109,8 @@ export default function Wishlist() {
         }
 
         try {
+            console.log("userId")
+            console.log(userId)
             const response = await fetch(`${apiUrl}/wishlist/${gameId}`, {
                 method: 'DELETE',
                 headers: {

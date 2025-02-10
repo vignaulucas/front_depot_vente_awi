@@ -14,6 +14,11 @@ import HomePage from "./screens/home";
 import Wishlist from "./screens/wishlist";
 import GamePurchase from "./screens/buyGame";
 import GlobalFinancialSummary from "./screens/globalFinancialSummary";
+import ParticularFinancialSummary from "./screens/particularFinancialSummary";
+import UserParticularFinancialSummary from "./screens/userParticularSummary";
+import NonUserParticularFinancialSummary from "./screens/particularFinancialSummaryNonUser";
+import SellGameList from "./screens/gameSell";
+import GameDetail from "./screens/gameDetail";
 
 function App() {
 
@@ -33,6 +38,12 @@ function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/purchase" element={<GamePurchase />} />
         <Route path="/globalFinancialSummary" element={<GlobalFinancialSummary />} />
+        <Route path="/bilanParticulier" element={<ParticularFinancialSummary />} />
+        <Route path="/bilanParticulierUser" element={<UserParticularFinancialSummary />} />
+        <Route path="/bilanParticulierNonUser" element={<NonUserParticularFinancialSummary />} />
+        <Route path="/listeJeuxVendus" element={<SellGameList />} />
+        <Route path="/game/details/:gameId" element={<GameDetail />} />
+
         {/*<Route path="/home" element={<Home />} />*/}
         {/* Ajoutez d'autres routes si nécessaire */}
       </Routes>
