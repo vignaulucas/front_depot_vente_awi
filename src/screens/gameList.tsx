@@ -98,9 +98,9 @@ export default function GameList() {
         },
     });
 
-    const filteredGames = games.filter((game) =>
-        searchByName === '' || game.name.toLowerCase().includes(searchByName.toLowerCase())
-    );
+    const filteredGames = Array.isArray(games) ? games.filter((game) =>
+    (searchByName === '' || game.name.toLowerCase().includes(searchByName.toLowerCase()))
+) : [];
 
     const handlePrintLabel = (game: Game) => {
         const newWindow = window.open('', '_blank');

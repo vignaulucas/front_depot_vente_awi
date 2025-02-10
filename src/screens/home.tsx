@@ -86,7 +86,10 @@ export default function Home() {
                     },
                 });
                 const gamesData = await gamesResponse.json();
+                console.log(gamesData)
                 setGames(gamesData);
+                console.log("games")
+                console.log(games)
             } catch (error) {
                 setIsSessionActive(false);
                 console.error('Erreur lors de la récupération des jeux en vente:', error);
@@ -156,11 +159,12 @@ export default function Home() {
         },
     });
 
-    const filteredGames = games.filter((game) =>
-        (searchByName === '' || game.name.toLowerCase().includes(searchByName.toLowerCase())) &&
-        (searchByPublisher === '' || game.publisher.toLowerCase().includes(searchByPublisher.toLowerCase())) &&
-        (searchByPrice === '' || game.price.toString().includes(searchByPrice))
-    );
+    const filteredGames = Array.isArray(games) ? games.filter((game) =>
+    (searchByName === '' || game.name.toLowerCase().includes(searchByName.toLowerCase())) &&
+    (searchByPublisher === '' || game.publisher.toLowerCase().includes(searchByPublisher.toLowerCase())) &&
+    (searchByPrice === '' || game.price.toString().includes(searchByPrice))
+) : [];
+
 
     return (
         <ThemeProvider theme={theme}>

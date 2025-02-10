@@ -55,6 +55,7 @@ function Navbar() {
                     <Button color="inherit" href="/home">Acceuil</Button>
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeUtilisateur">Liste utilisateur</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/depotVente">Dépôt Vente</Button>}
+                    {(isAdmin || isManager) && <Button color="inherit" href="/purchase">Achat Jeux</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeJeuxDepot">Liste jeux déposés</Button>}
                     {(isAdmin || isManager) && <Button color="inherit" href="/listeSessionsVente">Session Vente</Button>}
                     {isAdmin  && <Button color="inherit" href="/uploadCsv">Déposer CSV</Button>}

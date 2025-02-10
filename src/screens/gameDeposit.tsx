@@ -434,7 +434,7 @@ const GameDeposit: React.FC = () => {
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                     boxSizing: 'border-box',
                     overflowY: 'auto',
-                    maxHeight: '90vh' // Limite la hauteur pour permettre le défilement à l'intérieur du conteneur
+                    maxHeight: '90vh'
                 }}>
                     <Typography variant="h4" style={{ marginBottom: '20px', fontWeight: 'bold' }}>
                         Déposer des jeux

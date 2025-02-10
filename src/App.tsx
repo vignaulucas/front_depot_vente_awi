@@ -12,6 +12,7 @@ import UploadCsv from "./screens/uploadCsv";
 import GameList from "./screens/gameList";
 import HomePage from "./screens/home";
 import Wishlist from "./screens/wishlist";
+import GamePurchase from "./screens/buyGame";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/uploadCsv" element={<UploadCsv />} />
         <Route path="/listeJeuxDepot" element={<GameList />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/purchase" element={<GamePurchase />} />
         {/*<Route path="/home" element={<Home />} />*/}
         {/* Ajoutez d'autres routes si nécessaire */}
       </Routes>
